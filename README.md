@@ -16,6 +16,6 @@
 
 ## step 1 - 설치 및 SASS 컴파일
 
-[SASS 컴파일 툴](https://prepros.io)
+[SASS 컴파일 툴](http://koala-app.com/)
 
 ## step 2 - 변수 (Variables)
