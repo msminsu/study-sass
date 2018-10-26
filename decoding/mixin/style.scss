@@ -1,0 +1,40 @@
+@import 'mixins/bg.scss';
+@import 'mixins/breakpoint.scss';
+@import 'mixins/clearfix.scss';
+@import 'mixins/ellipsis.scss';
+
+//변수 선언
+$static : '../';
+$folder: 'main/';
+
+.box{
+    background: orange;
+    @include bg($bg:'main.jpg');
+    @include clearfix();
+}
+
+$breakpoints: (
+		popup: 'min-width: 500px',
+		tablet: 'min-width: 640px',
+		pc: 'min-width: 960px',
+		max: 'min-width: 1260px'
+);
+
+.break{
+    background: yellow;
+    @include bp('tablet'){
+        background: coral;
+    }
+    @include breakpoint('200px'){
+        background: silver;
+    }
+    @include breakpoint('$hidpi'){
+        background: silver;
+    }
+}
+
+
+.area{
+    @include ellipsis($no-wrap:false);
+    font-size:  em(2,0);
+}

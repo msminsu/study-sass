@@ -1,0 +1,15 @@
+@mixin ellipsis($no-wrap: true){
+    @if $no-wrap{
+        white-space: nowrap;
+    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@function em($target, $context: 16px) {
+	@if $target == 0{
+		@return 0
+	}
+	@return $target / $context + 0em;
+}
